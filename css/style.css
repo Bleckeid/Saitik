@@ -1,0 +1,216 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* тут теперь пусто */
+}
+
+body::-webkit-scrollbar {
+    width: 5px; /* Ширина всего элемента навигации (я манал это делать всё) */
+}
+  
+body::-webkit-scrollbar-track {
+    background: #333; /* Цвет дорожки */
+    opacity: 0;
+}
+  
+body::-webkit-scrollbar-thumb {
+    background-color: #6B6B6B; /* Цвет бегунка */
+    border-radius: 20px; /* Округление */
+    border: 0.5px solid #6B6B6B; /
+}
+
+::selection {
+background: #6B6B6B; 
+color: #fff; /* Цвет текста */
+}
+
+.top {
+    top: 9%;
+    left: 1%;
+    font-size: 1.5rem;
+    color: white;
+    z-index: 100;
+    text-decoration: none;
+    position: fixed;
+    opacity: 0.5;
+}
+
+.top__facke {
+    top: 0;
+    opacity: 0;
+}
+
+
+.backvideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -10000;
+}
+
+header {
+    opacity: 0;
+    animation: ani 2s forwards;
+  }
+  
+  @keyframes ani {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    /* top: 4; */ 
+    width: 95%; 
+    background-color: #333;
+    /* margin-left: 2%;
+    margin-right: 2%; */
+    /* border-radius: 15px; */
+    font-weight: bold;
+    width: 100%;
+}
+  
+
+.navbar a {
+    float: right;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    margin: auto;
+    padding: 20px;
+    text-decoration: none;
+    margin-left: 10px;
+}
+  
+.nekitnebei {
+    margin-right: 150px;
+}
+
+
+.header_logo {
+    display: inline-block;
+    align-items: center;
+    margin-left: 11%;
+    margin-top: 0.1%;
+}
+
+.scale {
+    transition: 0.5s; /* Время эффекта */
+}
+   .scale:hover {
+    transform: scale(1.1); /* Увеличиваем масштаб */
+}
+
+.scale_top {
+    transition: 0.5s; /* Время эффекта */
+}
+   .scale_top:hover {
+    transform: scale(1.4); /* Увеличиваем масштаб */
+}
+
+.dropdown {
+    float: right;
+    overflow: hidden;
+}
+  
+.dropdown .dropbtn {
+    cursor: pointer;
+    font-size: 20px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 17px;
+    background-color: inherit;
+    font-family: inherit;
+    font-weight: bold;
+}
+  
+.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+    color: #FFFF00 
+    /*-webkit-text-shadow: 2px 2px 2px #000;
+    -moz-text-shadow: 2px 2px 2px #000;
+        text-shadow: 2px 2px 2px #000;*/
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #212121;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1000;
+    border-radius: 10px;
+}
+  
+.dropdown-content a {
+    float: none;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+  
+.dropdown-content a:hover {
+    color: #FFFF00;
+   /* -webkit-text-shadow: 2px 2px 2px #000;
+    -moz-text-shadow: 2px 2px 2px #000;
+        text-shadow: 2px 2px 2px #000; */
+}
+  
+.show {
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+main {
+    background-color: #23282B;
+    margin: 10%;
+    border-radius: 15px;
+    height: 3000px;
+}
+
+.stat {
+    justify-self: center;
+    display: flex;
+}
+
+
+h1 {
+    font-family: "Noto Sans", serif;
+    font-size: 5rem;
+    color: white;
+    margin: auto 0%;
+    padding-top: 10%;
+    font-weight: bold;    
+}
+
+.noto-sans {
+  font-family: "Noto Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.roboto {
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+  }
