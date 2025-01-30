@@ -7,7 +7,6 @@
 		<meta name="author" content="Wladislav Kosling">
         <link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/style.css">
-        <script src="js/script.js"></script>
         <link rel="icon" href="content/icon1.png" type="image/png">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,9 +20,8 @@
         </video> 
         <header>
             <div class="navbar roboto">
-                <div class="header_logo scale">
-                    <img src="content/icon1.png" alt="Лого Сайта" style="max-height: 3.7rem; display: inline-block;">
-                    <img src="content/icon2.png" alt="Лого Сайта" style="max-height: 1.7rem; margin-bottom: 14px;">
+                <div class="header_logo scale_top">
+                    <img src="content/logo_head.png" alt="Лого Сайта" style="max-height: 3.7rem; display: inline-block; user-select: none">
                 </div>
                 <a href="#" style="margin-right: 10%;">Кто мы</a>
                 <a href="#">Новости</a>
@@ -32,18 +30,60 @@
                         <i class="fa fa-caret-down"></i>
                     </button>
                     <div class="dropdown-content">
-                        <a href="#">Ссылка 1</a>
-                        <a href="#">Ссылка 2</a>
-                        <a href="#">Ссылка 3</a>
+                        <a href="#igri">Игры</a>
+                        <a href="#">Аниме</a>
+                        <a href="#">Другое</a>
                     </div>
                 </div> 
             </div>
         </header>
         <main>
             <div class="stat">
-                <h1> Статьи </h1>
-                
+                <h1 id="igri"> Статьи </h1>
             </div>
+            <h2 class="maina_stat_igri"> Игры </h2>
+            <div class="line"> </div>
+           
+            <div class="slideshow-container scale_slideshow">
+                <!-- основа -->
+                <div class="mySlides fade">
+                    <a href="" target="_blank">
+                        <img src="content/Titanfall2.jpg" style="width:100%; border-radius: 15px;">
+                        <div class="text a_slide">Titanfall 2</div>
+                    </a>
+                </div>
+                <div class="mySlides fade">
+                    <a href="" target="_blank">
+                        <img src="content/deus ex.png" style="width:100%; border-radius: 15px;">
+                        <div class="text a_slide">Deus Ex: Mankind Divided</div>
+                    </a>
+                </div>
+                <div class="mySlides fade">
+                    <a href="" target="_blank">
+                        <img src="content/cyberpunk.jpg" style="width: 100%; border-radius: 15px;">
+                        <div class="text a_slide">Cyberpunk 2077</div>
+                    </a>
+                </div>
+                <div class="mySlides fade">
+                    <a href="" target="_blank">
+                        <img src="content/Dark sousl.jpg" style="width: 100%; border-radius: 15px;">
+                        <div class="text a_slide">Dark Souls III</div>
+                    </a>
+                </div>
+                <!-- кнопки -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+            <!-- нижняя часть -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+            <script src="js/script.js"></script>
+            <div class="line" style="margin-top: 1%;"> </div>
         </main>
         <footer>
             

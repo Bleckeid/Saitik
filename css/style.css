@@ -2,12 +2,8 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
-    /* тут теперь пусто */
-}
-
 body::-webkit-scrollbar {
-    width: 5px; /* Ширина всего элемента навигации (я манал это делать всё) */
+    width: 5px; /* Ширина всего элемента навигации (я манал это всё) */
 }
   
 body::-webkit-scrollbar-track {
@@ -35,13 +31,13 @@ color: #fff; /* Цвет текста */
     text-decoration: none;
     position: fixed;
     opacity: 0.5;
+    user-select: none
 }
 
 .top__facke {
     top: 0;
     opacity: 0;
 }
-
 
 .backvideo {
     position: fixed;
@@ -53,17 +49,6 @@ color: #fff; /* Цвет текста */
     min-height: 100%;
     z-index: -10000;
 }
-
-header {
-    opacity: 0;
-    animation: ani 2s forwards;
-  }
-  
-  @keyframes ani {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
-  }
-
 
 .navbar {
     position: fixed;
@@ -78,9 +63,9 @@ header {
     /* border-radius: 15px; */
     font-weight: bold;
     width: 100%;
+    z-index: 2;
 }
   
-
 .navbar a {
     float: right;
     font-size: 20px;
@@ -108,14 +93,22 @@ header {
     transition: 0.5s; /* Время эффекта */
 }
    .scale:hover {
-    transform: scale(1.1); /* Увеличиваем масштаб */
+    transform: scale(1.05); /* Увеличиваем масштаб */
 }
 
 .scale_top {
     transition: 0.5s; /* Время эффекта */
 }
    .scale_top:hover {
-    transform: scale(1.4); /* Увеличиваем масштаб */
+    transform: scale(1.15); /* Увеличиваем масштаб */
+    color: #FFFF00;
+}
+
+.scale_slideshow{
+    transition: 1s; /* Время эффекта */
+}
+   .scale_slideshow:hover {
+    transform: scale(1.02); /* Увеличиваем масштаб */
 }
 
 .dropdown {
@@ -146,7 +139,7 @@ header {
     display: none;
     position: absolute;
     background-color: #212121;
-    min-width: 160px;
+    min-width: 120px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1000;
     border-radius: 10px;
@@ -188,6 +181,135 @@ main {
     display: flex;
 }
 
+.maina_stat_igri {
+    font-family: "Noto Sans", serif;
+    font-size: 3.5rem;
+    color: white;
+    font-weight: bold;
+    margin-top: 5%;
+    margin-left: 5%; 
+    margin-bottom: 1%;
+}
+
+.line {
+    border-bottom: 3px solid white; /* Параметры линии */
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+/* ------------------- */
+
+* {box-sizing:border-box}
+
+/* Slideshow */
+.slideshow-container {
+  max-width: 1150px;
+  position: relative;
+  margin: auto;
+  margin-top: 2%;
+  z-index: 1;
+  user-select: none
+}
+
+.slideshow_img {
+    width:100%;
+    border-radius: 15px;
+}
+
+/* Hide images */
+.mySlides {
+    display: none;
+    border-radius: 10px;
+}
+
+/* buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none
+}
+
+/* позиция лед кноп */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Выделение навигации */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: #FFD35F;
+}
+
+/* text */
+.text {
+  font-family: "Noto Sans", serif;
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  font-weight: bold; 
+}
+
+.a_slide {
+    text-transform: uppercase;
+    line-height: 1;
+    -webkit-transition: all 0.5s ease;
+            transition: all 0.5s ease;   
+}
+
+.a_slide:hover {
+    color: #FFD35F; /* Меняем цвет текста */
+}
+
+/* нижние индикаторы */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  user-select: none
+}
+
+.active, .dot:hover {
+  background-color: #FFD35F;
+}
+
+/* анимация угасания yar */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* ------------------- */
 
 h1 {
     font-family: "Noto Sans", serif;
