@@ -1,24 +1,33 @@
-/* Когда пользователь нажимает на кнопку,
-переключение между скрытием и отображением раскрывающегося содержимого */
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
 }
 
-// Закройте выпадающее меню, если пользователь щелкает за его пределами
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
   }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex -1].style.display = "block";
+  setTimeout(showSlides, 10000)
+  dots[slideIndex -1].className += " active";
 }
 
-
-
+setInterval(() => plusSlides(1), 10000);
 
 /* ну и зачем я это делал бл а ????? */
