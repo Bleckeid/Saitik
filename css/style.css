@@ -3,11 +3,11 @@ html {
 }
 
 body {
-    /* тут теперь пусто */
+    margin: 0;
 }
 
 body::-webkit-scrollbar {
-    width: 5px; /* Ширина всего элемента навигации (я манал это делать всё) */
+    width: 5px; /* Ширина всего элемента навигации (я манал это всё) */
 }
   
 body::-webkit-scrollbar-track {
@@ -35,13 +35,13 @@ color: #fff; /* Цвет текста */
     text-decoration: none;
     position: fixed;
     opacity: 0.5;
+    user-select: none
 }
 
 .top__facke {
     top: 0;
     opacity: 0;
 }
-
 
 .backvideo {
     position: fixed;
@@ -54,16 +54,83 @@ color: #fff; /* Цвет текста */
     z-index: -10000;
 }
 
-header {
-    opacity: 0;
-    animation: ani 2s forwards;
+#popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 2;
+}
+   
+  #popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #212121;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.popup_h2 {
+    font-size: 1.2rem;
+}
+
+  .registration-cssave form {
+    max-width:800px;
+    padding:30px 50px;
+    border-radius:10px;
   }
   
-  @keyframes ani {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
+  .registration-cssave .item {
+    border-radius:10px;
+    margin-bottom:25px;
+    padding:10px 20px;
+    width: 250px;
+    height: 40px;
+  }
+  
+  .registration-cssave .create-account {
+    border-radius:30px;
+    padding:10px 20px;
+    font-size:18px;
+    font-weight:bold;
+    background-color:#FFD35F ;
+    border:none;
+    color:white;
+    margin-left: 14%;
+    cursor: pointer;
+  }
+  
+  .close {
+    font-family: "Noto Sans", serif;
+    border: none;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    margin: auto;
+    text-decoration: none;
+    background: none;
+    font-weight: bold;
+    cursor: pointer;
+    float:right;
   }
 
+
+
+  .create-account:hover {
+    box-shadow: 1px 1px 25px 10px rgba(146, 148, 248, 0.4);
+  }
+  
+  @media (max-width: 576px) {
+    .registration-cssave form {
+      padding:50px 20px;
+    }
+  }
 
 .navbar {
     position: fixed;
@@ -78,8 +145,35 @@ header {
     /* border-radius: 15px; */
     font-weight: bold;
     width: 100%;
+    z-index: 2;
 }
-  
+
+.navbar button {
+    font-family: "Noto Sans", serif;
+    border: none;
+    float: right;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    margin: auto;
+    padding: 20px;
+    text-decoration: none;
+    margin-left: 10px;
+    background: none;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 11%;
+    padding-top: 19px;
+}
+
+
+
+.navbar button:hover, .navbar button:focus {
+    color: #FFFF00 
+    /*-webkit-text-shadow: 2px 2px 2px #000;
+    -moz-text-shadow: 2px 2px 2px #000;
+        text-shadow: 2px 2px 2px #000;*/
+}
 
 .navbar a {
     float: right;
@@ -108,14 +202,22 @@ header {
     transition: 0.5s; /* Время эффекта */
 }
    .scale:hover {
-    transform: scale(1.1); /* Увеличиваем масштаб */
+    transform: scale(1.05); /* Увеличиваем масштаб */
 }
 
 .scale_top {
     transition: 0.5s; /* Время эффекта */
 }
    .scale_top:hover {
-    transform: scale(1.4); /* Увеличиваем масштаб */
+    transform: scale(1.1); /* Увеличиваем масштаб */
+    color: #FFFF00;
+}
+
+.scale_slideshow{
+    transition: 1s; /* Время эффекта */
+}
+   .scale_slideshow:hover {
+    transform: scale(1.02); /* Увеличиваем масштаб */
 }
 
 .dropdown {
@@ -146,10 +248,12 @@ header {
     display: none;
     position: absolute;
     background-color: #212121;
-    min-width: 160px;
+    min-width: 120px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1000;
     border-radius: 10px;
+    margin-top: 3%;
+    margin-left: 1%;
 }
   
 .dropdown-content a {
@@ -180,12 +284,450 @@ main {
     background-color: #23282B;
     margin: 10%;
     border-radius: 15px;
-    height: 3000px;
+    height: fit-content;
+
 }
+
+.stat_igri {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-image: url("../content/backdrop.png");
+    padding-bottom: 5%;
+    padding-top: 1px;
+}
+
+.main_news {
+    margin-top: 15%;
+    background-color: #23282B;
+    border-radius: 15px;
+    padding-bottom: 30px;
+    margin: 10%;
+    margin-bottom: 7%;
+}
+
 
 .stat {
     justify-self: center;
     display: flex;
+}
+
+.maina_stat {
+    font-family: "Noto Sans", serif;
+    font-size: 3.5rem;
+    color: white;
+    font-weight: bold;
+    margin-top: 5%;
+    margin-left: 5%; 
+    margin-bottom: 1%;
+}
+
+.line {
+    border-bottom: 3px solid white; /* Параметры линии */
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+/* ------------------- */
+
+* {box-sizing:border-box}
+
+/* Slideshow */
+.slideshow-container {
+  max-width: 1150px;
+  position: relative;
+  margin: auto;
+  margin-top: 2%;
+  z-index: 1;
+  user-select: none
+}
+
+.slideshow_img {
+    width:100%;
+    border-radius: 15px;
+}
+
+/* Hide images */
+.mySlides {
+    display: none;
+    border-radius: 10px;
+}
+
+/* buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none
+}
+
+/* позиция лед кноп */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Выделение навигации */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: #FFD35F;
+}
+
+/* text */
+.text {
+  font-family: "Noto Sans", serif;
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  font-weight: bold; 
+}
+
+.a_slide {
+    text-transform: uppercase;
+    line-height: 1;
+    -webkit-transition: all 0.5s ease;
+            transition: all 0.5s ease;   
+}
+
+.a_slide:hover {
+    color: #FFD35F; /* Меняем цвет текста */
+}
+
+/* нижние индикаторы */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  user-select: none
+}
+
+.active, .dot:hover {
+  background-color: #FFD35F;
+}
+
+/* анимация угасания yar */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 2s;
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* ------------------- */
+
+/* Slideshow */
+.slideshow-container-anime {
+    max-width: 1150px;
+    position: relative;
+    margin: auto;
+    margin-top: 2%;
+    z-index: 1;
+    user-select: none
+  }
+  
+  .slideshow_img-anime {
+      width:100%;
+      border-radius: 15px;
+  }
+  
+  /* Hide images */
+  .mySlides-anime {
+      display: none;
+      border-radius: 10px;
+  }
+  
+  /* buttons */
+  .prev-anime, .next-anime {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none
+  }
+  
+  /* позиция лед кноп */
+  .next-anime {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* Выделение навигации */
+  .prev-anime:hover, .next-anime:hover {
+    background-color: rgba(0,0,0,0.8);
+    color: #FFD35F;
+  }
+  
+  /* text */
+  .text-anime {
+    font-family: "Noto Sans", serif;
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    font-weight: bold; 
+  }
+  
+  .a_slide-anime {
+      text-transform: uppercase;
+      line-height: 1;
+      -webkit-transition: all 0.5s ease;
+              transition: all 0.5s ease;   
+  }
+  
+  .a_slide-anime:hover {
+      color: #FFD35F; /* Меняем цвет текста */
+  }
+  
+  /* нижние индикаторы */
+  .dot-anime {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    user-select: none
+  }
+  
+  .active-anime, .dot-anime:hover {
+    background-color: #FFD35F;
+  }
+  
+  /* анимация угасания yar */
+  .fade-anime {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 2s;
+    animation-name: fade;
+    animation-duration: 2s;
+  }
+  
+  @-webkit-keyframes fade-anime {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+  @keyframes fade-anime {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+/* ------------------- */
+
+.stat-anime {
+    border-top: solid 1px rgb(65 71 74);
+    border-bottom: solid 1px rgb(65 71 74);
+    padding-bottom: 5%;
+    background-color: #1e2224;
+    background-image: url("../content/backanime.png");
+}
+
+.maina_stat-anime {
+    font-family: "Noto Sans", serif;
+    font-size: 3.5rem;
+    color: white;
+    font-weight: bold;
+    margin-top: 1%;
+    margin-left: 5%; 
+    padding-bottom: 1%;
+}
+
+.main_stat_druge {
+    background-image: url("../content/backdrugoe.png");
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    padding-bottom: 7%;
+}
+
+.maina_stat_drugoe {
+    max-width: 1150px;
+    position: relative;
+    margin: auto;
+    padding-top: 2%;
+    margin-bottom: 2%;
+    z-index: 1;
+    user-select: none;
+}
+
+.maina_stat_drugoe img {
+    width:100%;
+    border-radius: 15px;
+}
+
+.main_news_board {
+    margin-top: 1%;
+    padding: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+    max-height: 130px;
+    border-bottom: solid 1px rgb(65 71 74);
+    user-select: none;
+    overflow: hidden;
+    max-height: 150px;
+}
+
+.main_news__img {
+    border-radius: 15px;
+    margin-right: 1%;
+    width: 196px;
+    height: 110px;
+}
+
+
+.scale_news {
+    transition: 1s; /* Время эффекта */
+}
+   .scale_news:hover {
+    transform: scale(1.1); /* Увеличиваем масштаб */
+}
+
+@keyframes myAnimation {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+  
+  .element {
+    animation: myAnimation 3s infinite;
+    font-size: 2rem;
+    color: white;
+    margin: 0;
+    padding-top: -3%;
+    user-select: none;
+  }
+
+.main_news__a {
+    font-family: "Noto Sans", serif;
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    bottom: 95px;
+    left: 215px;
+}
+
+.main_news__p {
+    font-family: "Noto Sans", serif;
+    font-size: 1.2rem;
+    color: gray;
+    text-decoration: none;
+    position: relative;
+    bottom: 95px;
+    left: 215px;
+}
+
+.main_news__a:hover {
+    color: #FFFF00;
+   /* -webkit-text-shadow: 2px 2px 2px #000;
+    -moz-text-shadow: 2px 2px 2px #000;
+        text-shadow: 2px 2px 2px #000; */
+    text-decoration: underline;
+}
+
+@keyframes go-left-right {        
+    from { left: 80px; }             /* от: left: 0px */
+    to { left: calc(100% - 130px); } /* до: left: 100%-50px */
+}
+
+.progress {
+    animation: go-left-right 5s infinite alternate;
+    position: relative;
+    width: 50px;
+    height: 20px;
+    background: #FFD35F;
+    border-radius: 15px;
+    margin-top: 1%;
+}
+
+
+
+footer {
+    background-color: #23282B;
+    width: 100%;
+    height: 5%;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: relative;
+}
+
+footer img {
+    display: inline-block;
+    align-items: center;
+    margin-left: 11%;
+    margin-top: 0.1%;
+    max-height: 3.6rem;
+    display: inline-block;
+    user-select: none;
+    
+}
+
+.fotermain {
+    display: flex;
+    gap: 5%;
+    justify-content: space-between;
+    align-content: center;
+    margin-top: 4%;
+}
+
+
+.fot1 {
+    margin-left: 11%; 
+    display: inline-block;
+    float: left;
+
+}
+
+.fot2 {
+    margin-right: 11%;
+    display: inline-block;
+    float: right;
+}
+
+footer h4 {
+    display: inline-block;
+    align-items: center;
+    user-select: none;
+    position: relative;
+    top: 2%;
 }
 
 
@@ -196,6 +738,24 @@ h1 {
     margin: auto 0%;
     padding-top: 10%;
     font-weight: bold;    
+}
+
+h3 {
+    font-family: "Noto Sans", serif;
+    font-size: 1rem;
+    color: white;
+    margin: auto 0%;
+    font-weight: bold;
+    
+}
+
+h4 {
+    font-family: "Noto Sans", serif;
+    font-size: 0.8rem;
+    color: white;
+    margin: auto 0%;
+    font-weight: bold;
+    float: right;
 }
 
 .noto-sans {
@@ -213,4 +773,4 @@ h1 {
     font-style: normal;
     font-variation-settings:
       "wdth" 100;
-  }
+}
