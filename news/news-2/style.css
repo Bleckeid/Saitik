@@ -26,6 +26,14 @@ background: #6B6B6B;
 color: #fff; /* Цвет текста */
 }
 
+.vid {
+    align-items: center;
+    margin-top: 1%;
+    border-radius: 15px;
+    width: 65%;
+    height: 70%;
+}
+
 .top {
     top: 9%;
     left: 1%;
@@ -102,7 +110,7 @@ color: #fff; /* Цвет текста */
     background-color:#FFD35F ;
     border:none;
     color:white;
-    margin-left: 14%;
+    margin-left: 20%;
     cursor: pointer;
   }
   
@@ -288,24 +296,6 @@ main {
 
 }
 
-.stat_igri {
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    background-image: url("../content/backdrop.png");
-    padding-bottom: 5%;
-    padding-top: 1px;
-}
-
-.main_news {
-    margin-top: 15%;
-    background-color: #23282B;
-    border-radius: 15px;
-    padding-bottom: 30px;
-    margin: 10%;
-    margin-bottom: 7%;
-}
-
-
 .stat {
     justify-self: center;
     display: flex;
@@ -321,295 +311,48 @@ main {
     margin-bottom: 1%;
 }
 
+.stat_igri {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding-top: 1px;
+}
+
 .line {
     border-bottom: 3px solid white; /* Параметры линии */
     margin-left: 5%;
     margin-right: 5%;
 }
 
-/* ------------------- */
-
-* {box-sizing:border-box}
-
-/* Slideshow */
-.slideshow-container {
-  max-width: 1150px;
-  position: relative;
-  margin: auto;
-  margin-top: 2%;
-  z-index: 1;
-  user-select: none
-}
-
-.slideshow_img {
-    width:100%;
+.img_news {
     border-radius: 15px;
-}
-
-/* Hide images */
-.mySlides {
-    display: none;
-    border-radius: 10px;
-}
-
-/* buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none
-}
-
-/* позиция лед кноп */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* Выделение навигации */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-  color: #FFD35F;
-}
-
-/* text */
-.text {
-  font-family: "Noto Sans", serif;
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-  font-weight: bold; 
-}
-
-.a_slide {
-    text-transform: uppercase;
-    line-height: 1;
-    -webkit-transition: all 0.5s ease;
-            transition: all 0.5s ease;   
-}
-
-.a_slide:hover {
-    color: #FFD35F; /* Меняем цвет текста */
-}
-
-/* нижние индикаторы */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-  user-select: none
-}
-
-.active, .dot:hover {
-  background-color: #FFD35F;
-}
-
-/* анимация угасания yar */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 2s;
-  animation-name: fade;
-  animation-duration: 2s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-/* ------------------- */
-
-/* Slideshow */
-.slideshow-container-anime {
-    max-width: 1150px;
-    position: relative;
-    margin: auto;
+    max-width: 100%;
     margin-top: 2%;
-    z-index: 1;
-    user-select: none
-  }
-  
-  .slideshow_img-anime {
-      width:100%;
-      border-radius: 15px;
-  }
-  
-  /* Hide images */
-  .mySlides-anime {
-      display: none;
-      border-radius: 10px;
-  }
-  
-  /* buttons */
-  .prev-anime, .next-anime {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none
-  }
-  
-  /* позиция лед кноп */
-  .next-anime {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
-  
-  /* Выделение навигации */
-  .prev-anime:hover, .next-anime:hover {
-    background-color: rgba(0,0,0,0.8);
-    color: #FFD35F;
-  }
-  
-  /* text */
-  .text-anime {
-    font-family: "Noto Sans", serif;
-    color: #f2f2f2;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center;
-    font-weight: bold; 
-  }
-  
-  .a_slide-anime {
-      text-transform: uppercase;
-      line-height: 1;
-      -webkit-transition: all 0.5s ease;
-              transition: all 0.5s ease;   
-  }
-  
-  .a_slide-anime:hover {
-      color: #FFD35F; /* Меняем цвет текста */
-  }
-  
-  /* нижние индикаторы */
-  .dot-anime {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-    user-select: none
-  }
-  
-  .active-anime, .dot-anime:hover {
-    background-color: #FFD35F;
-  }
-  
-  /* анимация угасания yar */
-  .fade-anime {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 2s;
-    animation-name: fade;
-    animation-duration: 2s;
-  }
-  
-  @-webkit-keyframes fade-anime {
-    from {opacity: .4}
-    to {opacity: 1}
-  }
-  
-  @keyframes fade-anime {
-    from {opacity: .4}
-    to {opacity: 1}
-  }
-
-/* ------------------- */
-
-.stat-anime {
-    border-top: solid 1px rgb(65 71 74);
-    border-bottom: solid 1px rgb(65 71 74);
-    padding-bottom: 5%;
-    background-color: #1e2224;
-    background-image: url("../content/backanime.png");
-}
-
-.maina_stat-anime {
-    font-family: "Noto Sans", serif;
-    font-size: 3.5rem;
-    color: white;
-    font-weight: bold;
-    margin-top: 1%;
-    margin-left: 5%; 
-    padding-bottom: 1%;
-}
-
-.main_stat_druge {
-    background-image: url("../content/backdrugoe.png");
-    border-bottom-right-radius: 15px;
-    border-bottom-left-radius: 15px;
-    padding-bottom: 7%;
-}
-
-.maina_stat_drugoe {
-    max-width: 1150px;
-    position: relative;
-    margin: auto;
-    padding-top: 2%;
     margin-bottom: 2%;
-    z-index: 1;
-    user-select: none;
 }
 
-.maina_stat_drugoe img {
-    width:100%;
-    border-radius: 15px;
+.news_con {
+    font-family: "Noto Sans", serif;
+    font-size: 1.5rem;
+    color: white;
+    margin-left: 17%;
+    margin-right: 17%;
+    margin-top: 0;
+    font-weight: bold;
+    text-align: justify;
 }
 
-.main_news_board {
-    margin-top: 1%;
-    padding: 10px;
-    margin-left: 5%;
-    margin-right: 5%;
-    max-height: 130px;
-    border-bottom: solid 1px rgb(65 71 74);
-    user-select: none;
-    overflow: hidden;
-    max-height: 150px;
+.news_a {
+    color: yellow;
+    text-decoration: none;
 }
 
-.main_news__img {
-    border-radius: 15px;
-    margin-right: 1%;
-    width: 196px;
-    height: 110px;
+.news_a:hover {
+    color: #FFFF00;
+    /* -webkit-text-shadow: 2px 2px 2px #000;
+     -moz-text-shadow: 2px 2px 2px #000;
+         text-shadow: 2px 2px 2px #000; */
+     text-decoration: underline;
 }
-
 
 .scale_news {
     transition: 1s; /* Время эффекта */
@@ -624,34 +367,7 @@ main {
     100% { opacity: 0; }
   }
   
-  .element {
-    animation: myAnimation 3s infinite;
-    font-size: 2rem;
-    color: white;
-    margin: 0;
-    padding-top: -3%;
-    user-select: none;
-  }
-
-.main_news__a {
-    font-family: "Noto Sans", serif;
-    font-size: 1.5rem;
-    color: white;
-    text-decoration: none;
-    position: relative;
-    bottom: 95px;
-    left: 215px;
-}
-
-.main_news__p {
-    font-family: "Noto Sans", serif;
-    font-size: 1.2rem;
-    color: gray;
-    text-decoration: none;
-    position: relative;
-    bottom: 95px;
-    left: 215px;
-}
+ 
 
 .main_news__a:hover {
     color: #FFFF00;
@@ -660,22 +376,6 @@ main {
         text-shadow: 2px 2px 2px #000; */
     text-decoration: underline;
 }
-
-@keyframes go-left-right {        
-    from { left: 80px; }             /* от: left: 0px */
-    to { left: calc(100% - 130px); } /* до: left: 100%-50px */
-}
-
-.progress {
-    animation: go-left-right 5s infinite alternate;
-    position: relative;
-    width: 50px;
-    height: 20px;
-    background: #FFD35F;
-    border-radius: 15px;
-    margin-top: 1%;
-}
-
 
 
 footer {

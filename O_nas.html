@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title> Cheese News </title>
+       <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+        <meta name="description" content="Обзоры, статьи и др.">
+		<meta name="author" content="Wladislav Kosling">
+		<link rel="stylesheet" href="main/o_nas/style.css">
+        <link rel="icon" href="content/onlylogo.png" type="image/png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Golos+Text:wght@400..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <p class="top__facke"> верх </p>
+        <a href="#top" class="top scale_top" > ⮝ </a>
+        <video autoplay muted loop class="backvideo">
+            <source src="content/yar.mp4" type="video/mp4">
+        </video> 
+        <header>
+            <div class="navbar roboto">
+                <div class="header_logo scale_top">
+                    <a href="Cheese.html" style="padding: 0;">
+                    <img src="content/logo_head.png" alt="Лого Сайта" style="max-height: 3.6rem; display: inline-block; user-select: none">
+                    </a>
+                </div>
+                <button onclick="showPopup()" class=""> Войти </button>
+                <a href="#" style="">О нас</a>  
+                <a href="Cheese.html#news">Новости</a>
+                <div class="dropdown">
+                    <button class="dropbtn" style="width: 125px; margin-right: 1%;"> Статьи ⮟
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="Cheese.html#igri">Игры</a>
+                        <a href="Cheese.html#anime">Аниме</a>
+                        <a href="Cheese.html#drugoe">Другое</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div>
+                <div class="stat">
+                    <p style="text-align: center;"><img src="content/logo_head.png" style="width: 40%;"></p>
+                </div>
+                    <div class="line"> </div>
+                </div>
+                <div class="news_con">
+                    <p> 
+                        Проект <span class="yelow">«Cheese» (СЫР)</span> — медиа-информационный ресурс, посвящённый освещению новостей и информации из широкого круга индустрии сетевого развлекательного контента (кино, игры и многое другое). 
+                        Проект постоянно развивается и расширяет свою аудиторию, а также имеет собственное креативное сообщество. 
+                    </p>
+                    <p> Для связи вы можете использовать электронную почту: <span class="yelow">cheese@mail.ru</span> </p>
+                </div>
+                <div class="line"> </div>
+            </div>
+            <div id="popup-overlay">
+                <div id="popup">
+                    <button onclick="hidePopup()" class="close scale_top">✖</button>
+                    <h1 style="font-size: 2rem; margin-left: 37%;">Войти</h1>
+                    <div class="registration-cssave">
+                        <form>
+                            <div class="form-group">
+                                <input class="form-control item" type="text" name="username" maxlength="15" minlength="4" pattern="^[a-zA-Z0-9_.-]*$" id="username" placeholder="Логин" required>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control item" type="password" name="Пароль" minlength="6" id="password" placeholder="Пароль" required>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control item" type="email" name="email" id="email" placeholder="Email" required>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-primary btn-block create-account scale_slideshow" type="submit">Вход в аккаунт</button>
+                            </div>
+                        </form>
+                    </div> 
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="fotermain">
+                <div class="fot1">
+                    <img src="content/logo_head.png" style="margin-left: -0.2%;">
+                    <h3 class="fot"> Рассказываем вам о самом интересном </h3>
+                </div>
+                <div class="fot2">
+                    <img src="content/ogran.png" style="position: relative; bottom: -12%; left: -27%;">
+                    <h3 style="position: relative; bottom: 35%;"> Использование любых материалов сайта <br>
+                        без согласования с администрацией запрещено<br>
+                        © 1999–2025 Cheese.ru
+                    </h3>
+                </div>
+            </div>
+        </footer>
+    <script src="main/o_nas/js/script.js"></script>
+    </body>
+</html>
